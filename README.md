@@ -31,13 +31,13 @@ http://127.0.0.1:8000/api/wallets/
 Доступные методы: GET, POST
 
 Для получения информации по конкретному кошельку:
-http://127.0.0.1:8000/api/wallets/<wallet_id> // где wallet_id - уникальный идентификатор кошелька
+http://127.0.0.1:8000/api/wallets/wallet_id // где wallet_id - уникальный идентификатор кошелька
 Доступные методы: GET, DELETE, PUTCH
 
 Для получения информации по транзакциям кошелька:
-http://127.0.0.1:8000/api/wallets/<wallet_id>/transactions // где wallet_id - уникальный идентификатор кошелька
+http://127.0.0.1:8000/api/wallets/wallet_id/transactions // где wallet_id - уникальный идентификатор кошелька
 Доступные методы: GET, POST
 
 Для получения информации по конкретной транзакции:
-http://127.0.0.1:8000/api/wallets/<wallet_id>/transactions/<transaction_id> // где wallet_id - уникальный идентификатор кошелька, a transaction_id - транзакции
+http://127.0.0.1:8000/api/wallets/wallet_id/transactions/transaction_id // где wallet_id - уникальный идентификатор кошелька, a transaction_id - транзакции
 Доступные методы: GET, DELETE, PUTCH
