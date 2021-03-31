@@ -5,17 +5,12 @@ from rest_framework.viewsets import GenericViewSet, ModelViewSet
 
 from .models import Transaction, Wallet
 from .serializers import (TransactionCreateSerializer,
-                          TransactionListSerializer, WalletCreateSerializer,
-                          WalletSerializer)
+                          TransactionListSerializer, WalletSerializer)
 
 
 class WalletViewSet(ModelViewSet):
     queryset = Wallet.objects.all()
-
-    def get_serializer_class(self):
-        if self.request.method == 'POST':
-            return WalletCreateSerializer
-        return WalletSerializer
+    serializer_class = WalletSerializer
 
 
 class AllTransactionViewSet(ListModelMixin, GenericViewSet):
